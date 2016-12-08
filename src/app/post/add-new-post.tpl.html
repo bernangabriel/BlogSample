@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h3 class="modal-title">Add new post</h3>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div data-ng-form name="postForm">
+               <div class="form-group">
+                   <label for="user">User</label>
+                   <select ng-model="post.userId" ng-options="item.id as item.name for item in users" class="form-control" required>
+                       <option value="">[ Select ]</option>
+                   </select>
+               </div>
+                <div class="form-group">
+                    <label for="name">Title</label>
+                    <input type="text" class="form-control" ng-model="post.title" required>
+                </div>
+                <div class="form-group">
+                    <label for="body">Body</label>
+                    <textarea rows="4" cols="3" class="form-control" ng-model="post.body" required></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-success" type="button" ng-click="addNewPost(post)" ng-disabled="!postForm.$valid">Add Post</button>
+    <button class="btn btn-default" type="button" ng-click="close()">Close</button>
+</div>

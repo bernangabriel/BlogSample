@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h3 class="modal-title">Add new comment</h3>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12">
+            <div data-ng-form name="commentForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" ng-model="comment.name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" ng-model="comment.email" required>
+                </div>
+                <div class="form-group">
+                    <label for="body">Body</label>
+                    <textarea rows="4" cols="3" class="form-control" ng-model="comment.body" required></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-success" type="button" ng-click="add(comment)" ng-disabled="!commentForm.$valid">Add Comment</button>
+    <button class="btn btn-default" type="button" ng-click="close()">Close</button>
+</div>

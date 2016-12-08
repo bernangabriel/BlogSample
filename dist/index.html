@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="app.module">
+
+<head>
+    <title>Blog Sample</title>
+    <meta charset="utf-8" />
+
+    <link href="/dist/assets/css/styles.css" rel="stylesheet" />
+    <link href="/dist/assets/css/main.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #F0F1F2;
+        }
+        
+        .navbar-default {
+            background-color: #2980b9;
+            border-color: #e7e7e7;
+        }
+        
+        .navbar-default .navbar-nav>li>a,
+        .navbar-default .navbar-text {
+            color: #fff;
+        }
+        
+        .navbar-default .navbar-nav>li>a:hover{
+            color:#bdc3c7;
+            font-weight: bold;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default" style="background-color: #2980b9; !important">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <i class="fa fa-rss" style="color:#fff; font-size:20px;"></i>
+                    <span style="color:#f1c40f;">BLOG-SAMPLE</span>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="home" href="#">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a ui-sref="post" href="#">Post</a></li>
+                    <li><a ui-sref="user" href="#">Users</a></li>
+                    <li><a ui-sref="about" href="#">About</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-if="enabledPostSearch">
+                    <li>
+                        <div class="navbar-form navbar-left">
+                            <a class="btn btn-success"><i class="fa fa-plus" ng-click="openAddNewPost()"> Add New Post</i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <form class="navbar-form navbar-left">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search post" ng-model="searchPost">
+                                <span class="input-group-btn">
+                                    <button type="button" ng-click="openSearchBox()" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                    <button type="button" ng-click="openSearchBox()" class="btn btn-default"><i class="fa fa-trash"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="container">
+            <div ui-view></div>
+        </div>
+    </div>
+
+    <script src="/dist/assets/js/vendors.js"></script>
+    <script src="/dist/assets/js/bundles.js"></script>
+    <script src="/dist/templates/templateCache.js"></script>
+
+</body>
+
+</html>

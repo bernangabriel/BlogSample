@@ -1,0 +1,37 @@
+<div class="hidden-md hidden-sm">
+    <div user-widget></div>
+</div>
+<div class="row">
+   <h4 class="post-page-title">Latest Blog Post</h4>
+    <div class="col-md-12">
+        <div class="post-box col-lg-12 col-md-4 col-sm-6" ng-repeat="item in vm.posts |filter:searchPost">
+            <div class="row">
+                <div class="col-lg-8 col-md-4">
+                    <span class="post-title">
+                        {{item.title}}
+                    </span>
+                </div>
+                <div class="col-lg-4 col-md-2 text-right">
+                    <span class="post-body">Posted By <a style="cursor:pointer;" ng-click="vm.viewUser(item)">{{item.userName}}</a></span>
+                </div>
+            </div>
+            <p class="post-body">{{item.body}}</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-2 text-left">
+                    <a class="btn btn-default btn-sm" ui-sref="details({id:item.id})">Read More</a>
+                </div>
+                <div class="col-lg-8 col-md-4 col-md-8 text-right">
+                    <a class="btn btn-primary btn-sm" ng-click="vm.editPost(item)"> <i class="fa fa-pencil-square-o"></i> </a>
+                    <a class="btn btn-danger btn-sm" ng-click="vm.deletePost(item)"> <i class="fa fa-trash"></i> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-md-12 text-center">
+        <button class="btn btn-primary btn-lg" ng-click="vm.showMorePosts()">Show More Posts</button>
+    </div>
+</div>

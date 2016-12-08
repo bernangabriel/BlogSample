@@ -1,0 +1,28 @@
+<div class="hidden-md hidden-sm">
+    <div post-author></div>
+</div>
+
+<div class="row">
+    <div class="post-container">
+        <h4 style="font-size:27px; margin:0px;color: #2980b9;margin-bottom: 10px;">{{vm.details.title}}</h4>
+        <p style="font-size: 16px;">{{vm.details.body}}</p>
+    </div>
+
+</div>
+
+
+<div class="row post-container">
+    <div class="col-md-12">
+        <div post-comments post-id="{{vm.details.id}}"></div>
+    </div>
+</div>
+
+
+<style>
+    .post-container {
+        background: #fff;
+        padding: 2em 1.5em;
+        box-shadow: 0px 1px 4px 0px rgba(104, 123, 144, 0.31);
+        border-radius: 0.3em;
+    }
+</style>

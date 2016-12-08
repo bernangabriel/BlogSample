@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-12">
+        <h4 class="post-page-title">Users List</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="post-box">
+            <div class="bs-callout bs-callout-warning" ng-repeat="item in vm.users track by $index">
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <h4>{{item.name}} <span class="badge">{{item.email}}</span> </h4>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <span>{{item.username}}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <lable style="font-weight:bold">Phone: </lable> <span>{{item.phone}}</span>
+                        <br>
+                        <lable style="font-weight:bold">Website: </lable> <span>{{item.website}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .bs-callout {
+        padding: 10px;
+        margin: 20px 0;
+        border: 1px solid #eee;
+        border-left-color: #2980b9;
+        border-left-width: 5px;
+        border-radius: 3px;
+    }
+</style>

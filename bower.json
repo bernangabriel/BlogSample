@@ -1,0 +1,32 @@
+{
+  "name": "vomp-blog",
+  "authors": [
+    "Bernan Cordero (bernangabriel@gmail.com)"
+  ],
+  "description": "Blog page using sample restfull api",
+  "main": "",
+  "keywords": [
+    "AngularJS",
+    "Bootstrap"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "angular": "angularjs#^1.5.9",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "angular-ui": "^0.4.0",
+    "angular-ui-router": "^0.3.2",
+    "angular-bootstrap": "^2.3.0",
+    "ngAnimate": "*",
+    "angular-sanitize": "^1.5.9"
+  }
+}

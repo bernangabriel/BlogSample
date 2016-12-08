@@ -1,0 +1,19 @@
+<div class="user-widget">
+    <div class="panel panel-warning">
+        <div class="panel-heading">Users</div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in users track by $index">
+                        <td>{{item.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

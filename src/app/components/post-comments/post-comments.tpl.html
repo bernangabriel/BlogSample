@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="row">
+        <div class="col-md-4">
+            <h4 class="comment">Comments</h4>
+        </div>
+        <div class="col-md-8 text-right">
+            <a href="" class="btn btn-success btn-sm" ng-click="openAddNewComment()"><i class="fa fa-comment-o"></i> Add new comment</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box-comment">
+                <div class="media" ng-repeat="item in comments track by $index">
+                    <div class="media-left">
+                        <i class="fa fa-user-circle" style="font-size: 42px;"></i>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading" style="color:#f39c12; font-size:17px;">{{item.email}}</h4>
+                        <p style="line-height:18px; font-size:12px;">{{item.body}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .post-container {
+        margin-top: 9px;
+        color: #868f98;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 1.8em;
+        margin-bottom: 1em;
+    }
+
+    .box-comment {
+        line-height: 40px;
+    }
+
+    .box-comment-email {
+    }
+
+    .box-comment i {
+        position: relative;
+        font-size: 52px;
+    }
+
+    .box-comment span {
+        vertical-align: top;
+        color: #7f8c8d;
+    }
+
+    .comment {
+        font-size: 1.5em;
+        margin-bottom: 1.2em;
+        color: #556a7f;
+        font-weight: 700;
+    }
+</style>
